@@ -96,14 +96,14 @@ app.put('/posts/:id', (req, res) => {
 });
 
 
-app.delete('/:id', (req, res) => {
-  BlogPost
-    .findByIdAndRemove(req.params.id)
-    .then(() => {
-      console.log(`Deleted blog post with id \`${req.params.id}\``);
-      res.status(204).end();
-    });
-});
+// app.delete('/:id', (req, res) => {
+//   BlogPost
+//     .findByIdAndRemove(req.params.id)
+//     .then(() => {
+//       console.log(`Deleted blog post with id \`${req.params.id}\``);
+//       res.status(204).end();
+//     });
+// });
 
 
 app.use('*', function (req, res) {
