@@ -1,1 +1,1 @@
-Blog app solution
+Blog-app Challenge
