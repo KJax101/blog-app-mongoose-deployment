@@ -5,7 +5,7 @@ const morgan = require('morgan');
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
-const { DATABASE_URL, PORT } = require('./config');
+const {DATABASE_URL, PORT } = require('./config');
 const { BlogPost } = require('./models');
 
 const app = express();
@@ -153,7 +153,7 @@ function closeServer() {
 // if server.js is called directly (aka, with `node server.js`), this block
 // runs. but we also export the runServer command so other code (for instance, test code) can start the server as needed.
 if (require.main === module) {
-  runServer(DATABASE_URL).catch(err => console.error(err));
+  runServer("mongodb://Kjax101:imkenman1@ds221271.mlab.com:21271/blog-app-with-mongoose").catch(err => console.error(err));
 }
 
 module.exports = { runServer, app, closeServer };

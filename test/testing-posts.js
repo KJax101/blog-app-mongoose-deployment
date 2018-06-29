@@ -11,8 +11,8 @@ const should = chai.should();
 
 const { BlogPost } = require('../models');
 const { closeServer, runServer, app } = require('../server');
-const { TEST_DATABASE_URL } = require('../config');
-
+// const { TEST_DATABASE_URL } = "mongodb://Kjax101:imkenman1@ds221271.mlab.com:21271/blog-app-with-mongoose"//require('../config');
+const TEST_DATABASE_URL = "mongodb://Kjax101:imkenman1@ds221271.mlab.com:21271/blog-app-with-mongoose"
 chai.use(chaiHttp);
 
 // this function deletes the entire database.
